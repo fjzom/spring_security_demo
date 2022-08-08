@@ -4,12 +4,7 @@ import java.util.List;
 
 
 import com.example.demo.domain.Role;
-import com.example.demo.domain.User;
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor @AllArgsConstructor
+import com.example.demo.domain.User; 
 public interface UserService {
 	User saveUser(User user);
 	Role saveRole(Role role);

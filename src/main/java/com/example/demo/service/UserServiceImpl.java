@@ -24,7 +24,6 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @RequiredArgsConstructor
 @Transactional
-@Slf4j
 public class UserServiceImpl implements UserService, UserDetailsService {
 
 	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);

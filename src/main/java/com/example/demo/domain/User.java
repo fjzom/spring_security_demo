@@ -25,19 +25,19 @@ public class User {
 	private String password;
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Collection<Role> roles = new ArrayList<>();
+//
+//	public User() {
+//
+//	}
 	
-	public User() {
-		
-	}
-	
-	public User(Object object, String name, String userName, String password, ArrayList arrayList) {
-		// TODO Auto-generated constructor stub
-		this.id = (Long) object;
-		this.name = name;
-		this.userName = userName;
-		this.password = password;
-		roles = arrayList;
-	}
+//	public User(Object object, String name, String userName, String password, ArrayList arrayList) {
+//		// TODO Auto-generated constructor stub
+//		this.id = (Long) object;
+//		this.name = name;
+//		this.userName = userName;
+//		this.password = password;
+//		roles = arrayList;
+//	}
 	public Long getId() {
 		return id;
 	}

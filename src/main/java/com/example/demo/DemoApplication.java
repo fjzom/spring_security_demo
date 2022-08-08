@@ -1,17 +1,19 @@
 package com.example.demo;
 
-import java.util.ArrayList;
-
+import com.example.demo.domain.Role;
+import com.example.demo.domain.User;
+import com.example.demo.service.UserDetailsService;
+import com.example.demo.service.UserService;
+import com.example.demo.service.UserServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.example.demo.domain.Role;
-import com.example.demo.domain.User;
-import com.example.demo.service.UserService;
+import java.util.ArrayList;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -24,6 +26,11 @@ public class DemoApplication {
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
+	@Bean
+	@Primary
+	UserDetailsService userDetailsService(){ return new UserServiceImpl();}
+
 	
 	@Bean
 	CommandLineRunner run(UserService userSrv) {
