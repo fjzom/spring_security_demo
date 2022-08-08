@@ -16,6 +16,15 @@ public class Role {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
+	
+	public Role(){
+		
+	}
+	public Role(Object id, String name) {
+		// TODO Auto-generated constructor stub
+		this.id = (Long) id;
+		this.name = name; 
+	}
 	public Long getId() {
 		return id;
 	}
