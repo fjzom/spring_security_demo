@@ -17,9 +17,9 @@ public class Role {
 	private Long id;
 	private String name;
 	
-//	public Role(){
-//
-//	}
+	public Role(){
+
+	}
 	public Role(Object id, String name) {
 		// TODO Auto-generated constructor stub
 		this.id = (Long) id;

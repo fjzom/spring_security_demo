@@ -40,10 +40,10 @@ public class DemoApplication {
 			userSrv.saveRole(new Role(null, "ROLE_ADMIN"));
 			userSrv.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
 
-			userSrv.saveUser(new User(null, "Jhon Travolta", "jhon", "1234", new ArrayList<>() ));
-			userSrv.saveUser(new User(null, "Will Smith", "will", "1234", new ArrayList<>() ));
-			userSrv.saveUser(new User(null, "Jim Carry", "jim", "1234", new ArrayList<>() ));
-			userSrv.saveUser(new User(null, "Arnold Schawarzenegger", "arnold", "1234", new ArrayList<>() ));
+			userSrv.saveUser(new User(null, "Jhon Travolta", "jhon", "1234", new  ArrayList<Role>() ));
+			userSrv.saveUser(new User(null, "Will Smith", "will", "1234",  new  ArrayList<Role>() ));
+			userSrv.saveUser(new User(null, "Jim Carry", "jim", "1234", new  ArrayList<Role>() ));
+			userSrv.saveUser(new User(null, "Arnold Schawarzenegger", "arnold", "1234",  new  ArrayList<Role>() ));
 
 			userSrv.addRoleToUser("jhon", "ROLE_USER");
 			userSrv.addRoleToUser("jhon", "ROLE_MANAGER");
